@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bf1a8cb-a011-438a-a4a8-f40804c37cf7" name="Changes" comment="Initial Changes">
-      <change beforePath="$PROJECT_DIR$/src/testRunner/sampleTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testRunner/sampleTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/devops/frontendTests/SampleUITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/devops/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/devops/SampleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/devops/backendTests/SampleApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/devops/backendTests/SampleApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testRunner/sampleTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testRunner/sampleTest.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,35 +46,50 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2THa47CPTvTEYWU4ol86SDHvdYm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "11",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\devOpsTestNAGP" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.devops.backendTests" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/devOpsTestNAGP/testRunner/sampleTest.xml">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn install" />
+    </option>
+  </component>
+  <component name="RunManager" selected="TestNG.C:/devOpsTestNAGP/testRunner/sampleApiTest.xml">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.devops.App" />
       <module name="devOpsTestNAGP" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.devops.*" />
+          <option name="PATTERN" value="org.devops.frontendTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -83,6 +107,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="C:/devOpsTestNAGP/testRunner/sampleApiTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="devOpsTestNAGP" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testRunner/sampleApiTest.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="C:/devOpsTestNAGP/testRunner/sampleTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="devOpsTestNAGP" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testRunner/sampleTest.xml" />
@@ -93,16 +127,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SampleTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SampleUITest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="devOpsTestNAGP" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.devops.*" />
+          <option name="PATTERN" value="org.devops.frontendTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.devops" />
-      <option name="MAIN_CLASS_NAME" value="org.devops.SampleTest" />
+      <option name="MAIN_CLASS_NAME" value="org.devops.frontendTests.SampleUITest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -112,9 +146,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/devOpsTestNAGP/testRunner/sampleApiTest.xml" />
         <item itemvalue="TestNG.C:/devOpsTestNAGP/testRunner/sampleTest.xml" />
         <item itemvalue="TestNG.C:/devOpsTestNAGP/src/testRunner/sampleTest.xml" />
-        <item itemvalue="TestNG.SampleTest" />
+        <item itemvalue="TestNG.SampleUITest" />
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>

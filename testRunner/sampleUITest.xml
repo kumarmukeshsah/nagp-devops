@@ -3,7 +3,7 @@
 <suite name="Practice Suite">
     <test name="Test Basics 1">
         <classes>
-            <class name="org.devops.SampleTest"/>
+            <class name="org.devops.frontendTests.SampleUITest"/>
         </classes>
-    </test> <!-- Test -->
-</suite> <!-- Suite -->
+    </test>
+</suite>
