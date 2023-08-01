@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bf1a8cb-a011-438a-a4a8-f40804c37cf7" name="Changes" comment="Initial Changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/devops/backendTests/SampleApiTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/devops/frontendTests/SampleUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/devops/sampleTests/SampleUITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testRunner/sampleApiTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testRunner/sampleTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testRunner/sampleUITest.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +85,7 @@
       <module name="devOpsTestNAGP" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.devops.frontendTests.*" />
+          <option name="PATTERN" value="org.devops.sampleTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,12 +127,12 @@
       <module name="devOpsTestNAGP" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.devops.frontendTests.*" />
+          <option name="PATTERN" value="org.devops.sampleTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.devops" />
-      <option name="MAIN_CLASS_NAME" value="org.devops.frontendTests.SampleUITest" />
+      <option name="MAIN_CLASS_NAME" value="org.devops.sampleTests.SampleUITest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
