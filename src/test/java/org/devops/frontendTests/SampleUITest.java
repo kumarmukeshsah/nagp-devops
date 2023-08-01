@@ -2,6 +2,7 @@ package org.devops.frontendTests;
 
 import org.devops.utility.GetProperties;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -13,7 +14,7 @@ public class SampleUITest {
     GetProperties getProperties = new GetProperties();
     @BeforeTest
     public void beforeTest(){
-        driver = new EdgeDriver();
+        driver = new ChromeDriver();
         driver.get(getProperties.readProperties("url"));
         driver.manage().window().maximize();
     }
