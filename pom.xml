@@ -22,8 +22,7 @@
       <artifactId>maven-surefire-plugin</artifactId>
       <configuration>
         <suiteXmlFiles>
-          <suiteXmlFile>testRunner/sampleUITest.xml</suiteXmlFile>
-          <suiteXmlFile>testRunner/sampleApiTest.xml</suiteXmlFile>
+          <suiteXmlFile>testRunner/sampleTest.xml</suiteXmlFile>
         </suiteXmlFiles>
       </configuration>
     </plugin>
