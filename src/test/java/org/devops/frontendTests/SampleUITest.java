@@ -1,5 +1,6 @@
 package org.devops.frontendTests;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.devops.utility.GetProperties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,6 +15,7 @@ public class SampleUITest {
     GetProperties getProperties = new GetProperties();
     @BeforeTest
     public void beforeTest(){
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get(getProperties.readProperties("url"));
         driver.manage().window().maximize();
