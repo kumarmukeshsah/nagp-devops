@@ -25,7 +25,23 @@ pipeline{
                  bat "mvn test"
             }
         }
-    }
+        stage("Publish to Artifactory"){
+            steps{
+                rtMavenDeployer(
+                    id: 'deployer',
+                    serverId: 'nagp_test',
+                    releaseRepo: 'nagpLocalRepo',
+                    snapshotRepo: 'nagpLocalRepo'
+                )
+                rtMavenRun(
+                    pom: 'pom.xml',
+                    goals: 'clean install',
+                    deployerId:'deployer'
+                )
+                rtPublishBuildInfo(
+                    serverId: 'nagp_test'
+                )
+            }
     post{
         success{
             bat "echo success"
