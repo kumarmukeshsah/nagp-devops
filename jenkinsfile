@@ -1,0 +1,34 @@
+pipeline{
+    agent any
+    environment{
+        notifyEmail = "mukesh.sah@nagarro.com"
+    }
+    tools{
+        maven 'maven_home'
+    }
+    triggers{
+        cron('0 06 * * *')
+    }
+    stages{
+        stage("code checkout"){
+            steps{
+                bat "echo new change"
+            }
+        }
+        stage("code build"){
+            steps{
+                bat "mvn clean"
+            }
+        }
+        stage("code test"){
+            steps{
+                 bat "mvn test"
+            }
+        }
+    }
+    post{
+        success{
+            bat "echo success"
+        }
+    }
+}
