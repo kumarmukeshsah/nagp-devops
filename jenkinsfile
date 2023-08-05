@@ -42,6 +42,7 @@ pipeline{
                     serverId: 'nagp_test'
                 )
             }
+        }
     post{
         success{
             bat "echo success"
