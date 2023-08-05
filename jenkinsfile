@@ -30,8 +30,8 @@ pipeline{
                 rtMavenDeployer(
                     id: 'deployer',
                     serverId: 'nagp_test',
-                    releaseRepo: 'nagpLocalRepo',
-                    snapshotRepo: 'nagpLocalRepo'
+                    releaseRepo: 'example-repo-local',
+                    snapshotRepo: 'example-repo-local'
                 )
                 rtMavenRun(
                     pom: 'pom.xml',
