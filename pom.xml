@@ -20,7 +20,7 @@
     <plugin>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-surefire-plugin</artifactId>
-      <version>2.12.4</version>
+      <version>3.0.0-M1</version>
       <configuration>
         <suiteXmlFiles>
           <suiteXmlFile>testRunner/sampleTest.xml</suiteXmlFile>
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>4.10.0</version>
+      <version>4.8.1</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
