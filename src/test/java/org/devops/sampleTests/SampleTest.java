@@ -1,13 +1,28 @@
 package org.devops.sampleTests;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class SampleTest {
+
+    WebDriver driver;
     @BeforeTest
     public void beforeTest() {
+        driver = new FirefoxDriver();
         System.out.println("Before Test");
+    }
+
+    @Test
+    public void sampleUITest(){
+        driver.get("http://google.in");
+        String expectedTitle = "Google";
+        String actualTitle = driver.getTitle();
+        Assert.assertEquals(actualTitle, expectedTitle,"Title Mismatched");
+        System.out.println("Assertion Passed expected title:  " + expectedTitle + "Matched with Actual: "+ actualTitle);
     }
 
     @Test
@@ -32,5 +47,11 @@ public class SampleTest {
         int res = b * a;
         System.out.println("Executing Third Sample Method");
         Assert.assertEquals(res, 28, "Multiple Method Failed");
+    }
+
+    @AfterTest
+    public void tearDown()
+    {
+        driver.close();
     }
 }
