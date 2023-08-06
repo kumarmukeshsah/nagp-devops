@@ -20,7 +20,7 @@ public class SampleTest {
     public void sampleUITest(){
         driver = new FirefoxDriver();
         driver.get("http://google.in");
-        Assert.assertEquals(driver.getTitle(), "Google","Title Mismatched");
+        Assert.assertEquals(driver.getTitle(), "Goog","Title Mismatched");
         System.out.println("Assertion Passed expected title Matched with Actual");
     }
 
@@ -29,7 +29,7 @@ public class SampleTest {
         int a = 4, b = 7;
         int sum = a + b;
         System.out.println("Executing First Sample Method");
-        Assert.assertEquals(sum, 11, "Addition test Failed");
+        Assert.assertEquals(sum, 10, "Addition test Failed");
         System.out.println("Addition test Assertion Passed");
     }
 
@@ -47,7 +47,7 @@ public class SampleTest {
         int a = 4, b = 7;
         int res = b * a;
         System.out.println("Executing Third Sample Method");
-        Assert.assertEquals(res, 28, "Multiplication Method Failed");
+        Assert.assertEquals(res, 2, "Multiplication Method Failed");
         System.out.println("Multiplication test Assertion Passed");
     }
 
