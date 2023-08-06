@@ -1,7 +1,9 @@
 package org.devops.sampleTests;
 
+import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -12,12 +14,17 @@ public class SampleTest {
     WebDriver driver;
     @BeforeTest
     public void beforeTest() {
-        driver = new FirefoxDriver();
         System.out.println("Before Test");
     }
 
     @Test
     public void sampleUITest(){
+        Proxy proxy = new Proxy();
+        proxy.setAutodetect(false);
+        proxy.setNoProxy("no_proxy-var");
+        FirefoxOptions firefoxOptions = new FirefoxOptions();
+        firefoxOptions.setCapability("proxy", proxy);
+        driver = new FirefoxDriver(firefoxOptions);
         driver.get("http://google.in");
         String expectedTitle = "Google";
         String actualTitle = driver.getTitle();
