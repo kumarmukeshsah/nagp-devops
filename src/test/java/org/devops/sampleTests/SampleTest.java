@@ -1,9 +1,8 @@
 package org.devops.sampleTests;
 
-import org.openqa.selenium.Proxy;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -19,17 +18,10 @@ public class SampleTest {
 
     @Test
     public void sampleUITest(){
-        Proxy proxy = new Proxy();
-        proxy.setAutodetect(false);
-        proxy.setNoProxy("no_proxy-var");
-        FirefoxOptions firefoxOptions = new FirefoxOptions();
-        firefoxOptions.setCapability("proxy", proxy);
-        driver = new FirefoxDriver(firefoxOptions);
+        driver = new FirefoxDriver();
         driver.get("http://google.in");
-        String expectedTitle = "Google";
-        String actualTitle = driver.getTitle();
-        Assert.assertEquals(actualTitle, expectedTitle,"Title Mismatched");
-        System.out.println("Assertion Passed expected title:  " + expectedTitle + "Matched with Actual: "+ actualTitle);
+        Assert.assertEquals(driver.getTitle(), "Google","Title Mismatched");
+        System.out.println("Assertion Passed expected title Matched with Actual");
     }
 
     @Test
@@ -38,6 +30,7 @@ public class SampleTest {
         int sum = a + b;
         System.out.println("Executing First Sample Method");
         Assert.assertEquals(sum, 11, "Addition test Failed");
+        System.out.println("Addition test Assertion Passed");
     }
 
     @Test
@@ -46,6 +39,7 @@ public class SampleTest {
         int res = b - a;
         System.out.println("Executing Second Sample Test");
         Assert.assertEquals(res, 3, "Subtraction test Failed");
+        System.out.println("Subtraction test Assertion Passed");
     }
 
     @Test
@@ -53,12 +47,14 @@ public class SampleTest {
         int a = 4, b = 7;
         int res = b * a;
         System.out.println("Executing Third Sample Method");
-        Assert.assertEquals(res, 28, "Multiple Method Failed");
+        Assert.assertEquals(res, 28, "Multiplication Method Failed");
+        System.out.println("Multiplication test Assertion Passed");
     }
 
     @AfterTest
     public void tearDown()
     {
         driver.close();
+        System.out.println("Executing Tear Down Driver closed");
     }
 }
